@@ -1,3 +1,4 @@
+/* Center the content and set maximum width */
 .App {
   text-align: center;
   margin: 50px auto;
@@ -5,24 +6,70 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* Style for the to-do input and add button */
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 button {
-  margin: 5px;
-  padding: 5px 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-input[type="text"] {
-  padding: 5px;
-  margin-right: 5px;
+/* Style for individual todo items */
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-div {
-  margin: 10px 0;
+.todo-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Strike-through text for completed tasks */
+.todo-card.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Style for the delete all button */
+.delete-all {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-all:hover {
+  background-color: #c82333;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
 }

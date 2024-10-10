@@ -11,7 +11,7 @@ const TodoItem = ({ todo }) => {
   });
 
   return (
-    <div style={{ textDecoration: todo.is_completed ? 'line-through' : 'none' }}>
+    <div className={`todo-card ${todo.is_completed ? 'completed' : ''}`}>
       <input
         type="checkbox"
         checked={todo.is_completed}
